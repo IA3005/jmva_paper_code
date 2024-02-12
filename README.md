@@ -5,4 +5,4 @@ To get the figures and the p-values of the statistical tests provided in the pap
 
 
 ## Requirements: 
-numpy - scipy - matplotlib - pymanopt - mne - tqdm - joblib
+numpy - scipy - matplotlib - moabb - pymanopt - mne - tqdm - joblib

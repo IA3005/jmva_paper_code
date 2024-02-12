@@ -5,7 +5,7 @@ tmin = 2
 delta_t = 3 
 resampling = 256
 selected_subjs = [11]
-quantity_to_fit = "norm"
+quantity_to_fit = "norm" #other options: "det" for determinant and "trace" for trace fittings
 df = {1:24, 2:20, 3:28, 4:41}
 n_jobs = -1
 

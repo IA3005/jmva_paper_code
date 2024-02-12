@@ -62,7 +62,7 @@ class ExoSkeleton():
         Parameters
         ----------
         tmin : float
-            Begining of the trial.
+            Offset of the trial.
         delta_t : float
             Duration of the trial.
         resampling : float, optional

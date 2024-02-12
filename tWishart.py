@@ -28,7 +28,7 @@ def t_wishart_rvs(n,scale,df,size=1):
         Degrees of freedom, must be greater than or equal to dimension of the scale matrix.
     scale : array_like
         Symmetric positive definite scale matrix of the distribution.
-    df : int
+    df : float
         Degrees of freedom of the t- modelling.
     size : int
         Number of samples to draw (defaut 1).
@@ -54,23 +54,23 @@ def t_wishart_rvs(n,scale,df,size=1):
 
 def t_wish_cost(R,S,n,df):
     """
-    
+    computes the cost function (negative log-likelihood of t-Wishart up to a multiplicative positive constant)
 
     Parameters
     ----------
-    R : TYPE
-        DESCRIPTION.
-    S : TYPE
-        DESCRIPTION.
-    n : TYPE
-        DESCRIPTION.
-    df : TYPE
-        DESCRIPTION.
+    R : array
+        Symmetric positive definite matrix, plays the role of the distribution's center.
+    S : ndarray
+        Samples, must be symmetric definite positive matrices of the same shape as `R`.
+    n : int
+        Degrees of freedom of the t-Wishart distribution.
+    df : float
+        Degrees of freedom of the t- modelling.
 
     Returns
     -------
-    TYPE
-        DESCRIPTION.
+    float
+        The negative log-likelihood of the samples at `R` (divided by n*number of samples).
 
     """
     k, p, _ = S.shape
@@ -80,23 +80,23 @@ def t_wish_cost(R,S,n,df):
 
 def t_wish_egrad(R,S,n,df):
     """
-    
+    Computes the Riemannian gradient of the cost (with respect to the Fisher Information Metric of t-Wishart)    
 
     Parameters
     ----------
-    R : TYPE
-        DESCRIPTION.
-    S : TYPE
-        DESCRIPTION.
-    n : TYPE
-        DESCRIPTION.
-    df : TYPE
-        DESCRIPTION.
+    R : array
+        Symmetric positive definite matrix, plays the role of the distribution's center.
+    S : ndarray
+        Samples, must be symmetric definite positive matrices of the same shape as `R`.
+    n : int
+        Degrees of freedom of the t-Wishart distribution.
+    df : float
+        Degrees of freedom of the t- modelling.
 
     Returns
     -------
     TYPE
-        DESCRIPTION.
+        Riemannian gradient of the cost of samples at `R`.
 
     """
     k, p, _ = S.shape

@@ -1,6 +1,6 @@
 # On elliptical and Inverse elliptical Wishart distributions: Review, new results, and applications
 
-This Code reproduces the numerical results about fitting real EEG data with Wishart and t-Wishart distributions
+This code reproduces the numerical results about fitting real EEG data with Wishart and t-Wishart distributions
 
 To get the figures and the p-values of the statistical tests provided in the paper, please run "main.py"
 
